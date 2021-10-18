@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie | {{ movie.title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Date Released:</th>
+            <th scope="col">Date Created:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ movie.title}}</td>
+            <td>{{ movie.date_released }}</td>
+            <td>{{ movie.date_created }}</td>
+          </tr>
+        </tbody>
+      </table>
+    <a type="button" class="btn btn-success" href="{% url 'movie_update' movie.id %}">Update</a>
+</body>
+</html>
